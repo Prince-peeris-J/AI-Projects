@@ -5,7 +5,7 @@ import requests
 import streamlit as st
 import whois
 import socket
-# --- Domain Processing Functions ---
+
 def extract_domain(url):
     extracted = tldextract.extract(url)
     subdomain = f"{extracted.subdomain}." if extracted.subdomain else ""
@@ -86,7 +86,6 @@ def domain_trust_report(input_url):
         "message": "Domain is active."
     }
 
-# --- Streamlit UI ---
 st.set_page_config(page_title="Fake Web Detector", layout="centered")
 st.title("TrustHire – Fake Web Detector")
 st.markdown(
